@@ -117,4 +117,118 @@ function getNearRest(first, second) {
 }
 console.log(getNearRest(54, 46))
 
-// 10 .Given two values , write a javascript Program to find out is whice one is nearest 100
+// 10 .Wrire a javascript program to find the number of  event digits in a an array of integers
+
+function FindNumberOfEvent(arr) {
+    return (
+        arr.filter((num) => num % 2 === 0).length
+
+    )
+
+}
+
+console.log(FindNumberOfEvent([23, 32423, 4234, 234234, 234, 23423,]))
+console.log(FindNumberOfEvent([23, 4, 42, 2, 4, 6, 4]))
+console.log(FindNumberOfEvent([1, 2, 45, 6, 7, 7]))
+
+// 11 .Wrire a javascript program to find the number of  event values up to a given number
+
+function FindNumberOfEvenNumber(arr) {
+    return arr.filter(number => number % 2 === 0).length
+}
+
+function createArrayOfNumber(num) {
+    var returnArray = [];
+    for (var i = 1; i <= num; i++) {
+        returnArray.push(i)
+    }
+    return returnArray
+
+}
+console.log(FindNumberOfEvenNumber(createArrayOfNumber(10)))
+console.log(FindNumberOfEvenNumber(createArrayOfNumber(3)))
+console.log(FindNumberOfEvenNumber(createArrayOfNumber(12)))
+console.log(FindNumberOfEvenNumber(createArrayOfNumber(12)))
+
+
+// 12 .Wrire a javascript program to check  weather a given array of integers is sorted in ascending order
+console.log('ans 12')
+
+function isAssanding(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i + 1] < arr[i]) return false
+    }
+    return true
+}
+console.log(isAssanding([1, 2, 3, 4, 5, 6, 7]))
+console.log(isAssanding([1, 2, 3, 4, 5, 6, 7, 3, 4]))
+console.log(isAssanding([1, 2, 3, 4, 5, 6, 7, 3, 234, 2]))
+
+
+// 13 .Wrire a javascript program to get largest even number from an array of integers
+
+
+function maxEvenNumber(arr) {
+
+    return Math.max(...arr.filter(number => number % 2 === 0));
+}
+
+console.log(maxEvenNumber([1, 2, 3, 4, 5, 6, 8]))
+
+
+// 14 .Wrire a javascript program to Replase the first digit in a string (should contains at least digit) with $ character
+
+function ReplaseFirstDigit(str) {
+    return str.replace(/[0-9]/, '$')
+}
+
+console.log(ReplaseFirstDigit('sadasdasda23'))
+console.log(ReplaseFirstDigit('1sadasdasda23'))
+console.log(ReplaseFirstDigit('sa4dasdasda23'))
+
+// 15 .Wrire a javascript program to two objects to determine if the first one containes the same  
+// Properties as the second one(whice may also have additionals properties )
+
+
+const obje1 = { a: 1, b: 2, c: 3, d: 4 }
+const obje2 = { a: 3, v: 5, c: 3, d: 5 }
+const obje3 = { a: 1, b: 2, c: 3, g: 4 }
+
+
+function objectsEqual(a, b) {
+    console.log(Object.keys(a))
+    console.log(Object.keys(b))
+    console.log(Object.keys(a).every(key => b[key]))
+
+
+}
+
+objectsEqual(obje1, obje2)
+
+
+// 15 .Wrire a javascript program to convert a csv comma-separated values (CSV) string to a 2D
+// array .A new Line indicates a new row in the array
+
+function parseCSV(csv) {
+    console.log(csv.split('\n').map(row => row.split(',')))
+}
+
+var csvfile = `adaa,asda,dasd
+asds,adas,asdas
+asda,adas,asdsa`
+parseCSV(csvfile)
+
+
+// 15 .Wrire a javascript program to generate a random haxadaecimal color code .
+
+
+function randomColor() {
+    var color = Math.floor(Math.random() * 16)
+    console.log(color)
+}
+
+randomColor()
+randomColor()
+randomColor()
+randomColor()
+randomColor()
