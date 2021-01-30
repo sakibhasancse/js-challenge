@@ -223,12 +223,15 @@ parseCSV(csvfile)
 
 
 function randomColor() {
-    var color = Math.floor(Math.random() * 16)
-    console.log(color)
+    return Math.floor(Math.random() * 16).toString(16)
+
 }
 
-randomColor()
-randomColor()
-randomColor()
-randomColor()
-randomColor()
+function randomHaxColor() {
+    return '#' + Array.from({ length: 6 }).map(randomColor).join('')
+}
+
+console.log(randomHaxColor())
+console.log(randomHaxColor())
+console.log(randomHaxColor())
+console.log(randomHaxColor())
