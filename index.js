@@ -234,4 +234,4 @@ function randomHaxColor() {
 console.log(randomHaxColor())
 console.log(randomHaxColor())
 console.log(randomHaxColor())
-console.log(randomHaxColor())
+console.log(randomHaxColor(m === undefined))
