@@ -9,9 +9,9 @@ function App() {
     <div className="container">
       <h1>Increment and Decrement</h1>
       <div className="quantity">
-        <a className="quantity_minus" onClick={() => dispatch(decNumber())} title="Decrement"><span>-</span></a>
+        <a className="quantity_minus" onClick={() => dispatch(decNumber(10))} title="Decrement"><span>-</span></a>
         <input type="text" name="quantity" className="quantity_input" value={mystate} />
-        <a className="quantity_plus" onClick={() => dispatch(incNumber())} title="Increment"><span>+</span></a>
+        <a className="quantity_plus" onClick={() => dispatch(incNumber(10))} title="Increment"><span>+</span></a>
       </div>
 
     </div>
