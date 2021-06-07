@@ -33,4 +33,38 @@ function regexVar() {
      */
     return re;
 }
-regexVar()
+// regexVar()
+
+function reverseString(s) {
+    try {
+        console.log(s.split("").reverse().join(""));
+    } catch (err) {
+        console.log("s.split is not a function.");
+        console.log(s)
+    }
+
+}
+reverseString("23243")
+// reverseString(Number(1234))
+
+// Throw
+function isPositive(a) {
+    if (Math.sign(a) === -1) throw Error("Negative Error");
+    else if (a === 0) throw Error("Zero Error");
+    else throw Error("YES")
+
+}
+function main() {
+    const n = +(readLine());
+
+    for (let i = 0; i < n; i++) {
+        const a = +(readLine());
+
+        try {
+            console.log(isPositive(a));
+        } catch (e) {
+            console.log(e.message);
+        }
+    }
+}
+// console.log(isPositive(2))
