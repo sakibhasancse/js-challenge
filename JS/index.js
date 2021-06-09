@@ -68,3 +68,14 @@ function main() {
     }
 }
 // console.log(isPositive(2))
+
+
+// Class Inheritances 
+
+class Rectangle {
+    constructor(w, h) {
+        this.w = w;
+        this.h = h;
+    }
+    return
+}
