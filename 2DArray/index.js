@@ -12,10 +12,16 @@ for (let i = 0; i < numberGrid.length; i++) {
   document.write('<br/>')
 }
 
-const btn5 = document.getElementById('btn5')
 
+const btn5 = document.getElementById('btn5')
 btn5.addEventListener('click', () => {
-  const x = [...numberGrid.slice(-1, numberGrid.length), ...numberGrid.slice(0, -1)]
-  numberGrid = x
-  console.log(numberGrid, x)
+  const first = btn1.innerHTML;
+  btn1.innerHTML = btn4.innerHTML;
+  btn4.innerHTML = btn7.innerHTML;
+  btn7.innerHTML = btn8.innerHTML;
+  btn8.innerHTML = btn9.innerHTML;
+  btn9.innerHTML = btn6.innerHTML;
+  btn6.innerHTML = btn3.innerHTML;
+  btn3.innerHTML = btn2.innerHTML;
+  btn2.innerHTML = first
 })
