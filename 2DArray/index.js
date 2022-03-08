@@ -25,3 +25,44 @@ btn5.addEventListener('click', () => {
   btn3.innerHTML = btn2.innerHTML;
   btn2.innerHTML = first
 })
+
+
+//Functions
+
+const factorial = (n) => {
+  var x = 1;
+
+  for (var i = n; i > 0; i--) {
+    x = x * i
+  }
+  return x;
+}
+
+function main() {
+  const n = +(readLine());
+
+  console.log(factorial(n));
+}
+
+
+/**
+*   Return the second largest number in the array.
+*   @param {Number[]} nums - An array of numbers.
+*   @return {Number} The second largest number in the array.
+**/
+
+function getSecondLargest(nums) {
+  // Complete the function
+  let largestNumber = 0;
+  let secondLargest = 0;
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] > largestNumber) {
+      secondLargest = largestNumber;
+      largestNumber = nums[i]
+    } else if (largestNumber === secondLargest || nums[i] > secondLargest) {
+      secondLargest = nums[i]
+    }
+  }
+  return secondLargest
+}
+getSecondLargest([23,2,3,4,5]);
